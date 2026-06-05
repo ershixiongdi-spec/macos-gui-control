@@ -5,21 +5,21 @@
 ## 核心原理
 
 ```
-┌─────────────────────────────────────┐
-│           macOS GUI Control          │
-├─────────────────────────────────────┤
-│  Layer 1: AppleScript (精准控制)      │
-│  osascript → System Events → 应用   │
-├─────────────────────────────────────┤
-│  Layer 2: cliclick (鼠标模拟)        │
-│  cliclick → CGEvent → 坐标点击      │
-├─────────────────────────────────────┤
-│  Layer 3: screencapture (截图)       │
-│  screencapture → PNG → vision 分析  │
-├─────────────────────────────────────┤
-│  Layer 4: hammerspoon (窗口管理)     │
-│  Lua config → 窗口布局/快捷键        │
-└─────────────────────────────────────┘
+┌───────────────────────────────────┐
+│         macOS GUI Control           │
+├───────────────────────────────────┤
+│  Layer 1: AppleScript (精准控制)    │
+│  osascript → System Events → 应用  │
+├───────────────────────────────────┤
+│  Layer 2: cliclick (鼠标模拟)       │
+│  cliclick → CGEvent → 坐标点击     │
+├───────────────────────────────────┤
+│  Layer 3: screencapture (截图)      │
+│  screencapture → PNG → vision 分析 │
+├───────────────────────────────────┤
+│  Layer 4: hammerspoon (窗口管理)    │
+│  Lua config → 窗口布局/快捷键       │
+└───────────────────────────────────┘
 ```
 
 ## 快速开始
@@ -83,7 +83,16 @@ ssh user@10.0.7.172 'osascript -e "..."
 
 - macOS Sequoia 26.5
 - cliclick 5.1
-- Node.js 26
+- OpenClaw 2026.4.15+
+- Node.js 24+
+
+## 远程 Mac Pro 状态
+
+| 项目 | 结果 |
+|------|------|
+| macOS | 13.7.8 (Ventura) |
+| OpenClaw | 2026.4.15 (041266a) |
+| Node | v24.14.1 |
 
 ## 许可证
 
